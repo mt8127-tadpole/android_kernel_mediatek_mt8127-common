@@ -274,6 +274,12 @@
 #define HI708_SENSOR_ID                         0x96
 #define S5K5E2YA_SENSOR_ID                      0x5e20
 #define OV5670_SENSOR_ID                        0x5670
+//narnia
+#define GC2235MIPI_SENSOR_ID                    0x2235
+#define MT9M114_SENSOR_ID			0x2481
+#define MT9M114MIPI_SENSOR_ID                   0x2481
+#define HI258_SENSOR_ID				0x00d1
+#define GC2375MIPI_SENSOR_ID		0x2375
 
 /* CAMERA DRIVER NAME */
 #define CAMERA_HW_DEVNAME            "kd_camera_hw"
@@ -383,6 +389,10 @@
 #define SENSOR_DRVNAME_OV2680_RAW               "ov2680_raw"
 #define SENSOR_DRVNAME_HI708_YUV                "hi708_yuv"
 #define SENSOR_DRVNAME_S5K5E2YA_MIPI_RAW        "s5k5e2yamipiraw"
+#define SENSOR_DRVNAME_GC2235_MIPI  "gc2235mipi"
+#define SENSOR_DRVNAME_MT9M114_MIPI_YUV   "mt9m114mipiyuv"
+#define SENSOR_DRVNAME_GC2375_MIPI_RAW "gc2375mipiraw"
+#define SENSOR_DRVNAME_HI258_MIPI_YUV "hi258mipiyuv"
 /*******************************************************************************
 *
 ********************************************************************************/

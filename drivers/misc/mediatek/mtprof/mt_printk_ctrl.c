@@ -75,7 +75,7 @@ static unsigned long nsec_low(unsigned long long nsec)
 /*                     Define Proc entry               */
 /* --------------------------------------------------- */
 MT_DEBUG_ENTRY(printk_ctrl);
-int mt_need_uart_console = 0;
+int mt_need_uart_console = 1;
 extern void mt_enable_uart(void);	/* printk.c */
 extern void mt_disable_uart(void);	/* printk.c */
 extern bool printk_disable_uart;
@@ -119,12 +119,14 @@ static ssize_t mt_printk_ctrl_write(struct file *filp, const char *ubuf, ssize_t
 //auto reboot after power off                                              
 void force_enable_uart_log(void)
 {
-	if(mt_need_uart_console){
-                pr_err("uart log alrady opened!!!!\n");
-		return;
-	}
+	//if(mt_need_uart_console){
+        //        pr_err("uart log alrady opened!!!!\n");
+	//	return;
+	//}
 
-	mt_need_uart_console = 1;
+	mt_need_uart_console = 1;	/* defualt, no uart */
+	mt_enable_uart();
+        force_enable_uart_log();
 	mt_enable_uart();
 	pr_err("--------------need uart log,force open uart log now-------------\n");
 
